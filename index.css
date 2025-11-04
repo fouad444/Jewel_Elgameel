@@ -145,7 +145,7 @@ h2{
     
     body::before {
         content: "";
-        position: relative;
+        position: fixed;
         top: 0;
         inset: 0;
         opacity: 0.2;
