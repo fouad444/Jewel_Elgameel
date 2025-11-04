@@ -218,13 +218,17 @@ h2{
 }
 
 
-
 @media (max-width: 480px) {
 
     body {
-        height: 100vh;
         margin: 0;
-        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        flex: 0 0 auto;  /* الهيدر ثابت فوق */
     }
 
     header h1 {
@@ -240,30 +244,29 @@ h2{
     }
 
     .a-container {
-        flex: 1;
+        flex: 1; /* تاخد المساحة المتبقية تحت الهيدر */
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;   /* توزيع رأسي متساوي */
-        align-items: center;             /* النص والعناصر في النص أفقيًا */
+        justify-content: space-evenly;  /* توزيع رأسي متساوي */
+        align-items: center;            /* توسيط أفقي */
         height: 100%;
         padding: 5px 0;
-        text-align: center;              /* لو في نصوص داخل h2 */
+        text-align: center;
     }
 
     h2 {
         width: 100%;
         margin: 0;
-        text-align: center;
     }
 
     .btn {
-        width: 90%;                      /* ياخد تقريبًا كل العرض */
-        max-width: 400px;                /* عشان ما يطلعش أكبر من اللازم */
-        padding: 18px 0;                 /* ارتفاع مريح */
+        width: 90%;
+        max-width: 400px;
+        padding: 18px 0;
         font-size: 1rem;
         border-radius: 10px;
         display: block;
-        margin: 0 auto;                  /* تأكيد إنه في النص */
+        margin: 0 auto;
         text-align: center;
     }
 }
