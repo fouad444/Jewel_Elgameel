@@ -158,6 +158,7 @@ h2{
     body{
         width: 100%;
         overflow: hidden;
+        height: 95vh;
     }
     body::before {
         content: "";
