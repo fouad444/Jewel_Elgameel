@@ -82,12 +82,25 @@ h2{
 
 
 
-
+/* 
 @media (max-width: 768px) {
     body {
         font-size: 16px;
         padding: 10px;
         height: 100vh;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        opacity: 0.2;
+        background-image: url("jewel.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 110%;
+        height: 110%;
+        z-index: -1;
     }
 
     header {
@@ -99,7 +112,11 @@ h2{
     .header-logo {
         width: 40px;
         height: auto;
-        position: static; /* تمنعها من الخروج عن مكانها */
+        position: static; /* تمنعها من الخروج عن مكانها 
+    }
+
+    .a-container{
+        
     }
 
     .btn {
@@ -123,7 +140,18 @@ h2{
         height: 100vh;
     }
     
-    
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        opacity: 0.2;
+        background-image: url("jewel.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 120%;
+        height: 125%;
+        z-index: -1;
+    }
 
     .btn {
         width: 70%;
@@ -138,7 +166,110 @@ h2{
     h1 {
         font-size: 1rem;
     }
+} */
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        flex: 0 0 auto; /* الهيدر ثابت في مكانه */
+    }
+
+    .a-container {
+        flex: 1; /* تاخد باقي الصفحة */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; /* توزيع متساوي رأسي */
+        align-items: center;
+        height: 100%;
+        padding: 10px 0;
+    }
+
+    h2 {
+        margin: 0;
+        width: 100%;
+    }
+
+    .btn {
+        width: 90%; /* ياخد تقريباً كل العرض */
+        padding: 15px 0; /* ارتفاع مناسب */
+        font-size: 1.1rem;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .header-logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
 }
+
+
+
+@media (max-width: 480px) {
+
+    body {
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    header h1 {
+        font-size: 1rem;
+        line-height: 1.3;
+        padding: 10px;
+    }
+
+    .header-logo {
+        width: 40px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    .a-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;   /* توزيع رأسي متساوي */
+        align-items: center;             /* النص والعناصر في النص أفقيًا */
+        height: 100%;
+        padding: 5px 0;
+        text-align: center;              /* لو في نصوص داخل h2 */
+    }
+
+    h2 {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .btn {
+        width: 90%;                      /* ياخد تقريبًا كل العرض */
+        max-width: 400px;                /* عشان ما يطلعش أكبر من اللازم */
+        padding: 18px 0;                 /* ارتفاع مريح */
+        font-size: 1rem;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;                  /* تأكيد إنه في النص */
+        text-align: center;
+    }
+}
+
+
+
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
