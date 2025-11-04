@@ -157,6 +157,7 @@ h2{
    
     body{
         width: 100%;
+        overflow: hidden;
     }
     body::before {
         content: "";
