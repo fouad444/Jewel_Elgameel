@@ -78,9 +78,9 @@ h2 {
 
 .fab {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 2rem;
-  background-color: #007bff;
+  background-color: #4b2e83;
   color: white;
   text-decoration: none;
   border-radius: 50%;
@@ -94,7 +94,7 @@ h2 {
 }
 
 .fab:hover {
-  background-color: #0056b3;
+  background-color: #6545b2;
   transform: translateY(-3px);
 }
 

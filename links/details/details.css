@@ -1,11 +1,16 @@
 /* details section */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .hotel-details-section {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #fbe9ff, #fcfbbe);
+  background: linear-gradient(135deg, #4b2e83 0%, #b88a44 100%);
   font-family: "Cairo", sans-serif;
   direction: ltr;
 }
@@ -33,7 +38,7 @@
 }
 
 .hotel-info h2 {
-  color: #0d6efd;
+  color: #7154b4;
   margin-bottom: 20px;
   font-size: 28px;
 }
@@ -51,7 +56,7 @@
 }
 
 .hotel-info i {
-  color: #0d6efd;
+  color: #7154b4;
   margin-left: 10px;
 }
 
@@ -84,5 +89,46 @@
 
   .hotel-info {
     padding: 25px;
+  }
+}
+
+/* شكل الأيقونات العامة */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d6b25e; /* الخلفية تبقى ذهبية */
+  color: #4b2e83; /* والأيقونة تبقى بنفسجية */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* التأثير عند المرور */
+.social-links a:hover {
+  background: #4b2e83; /* Royal Purple */
+  color: #d6b25e; /* Gold icon */
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* حجم متجاوب للموبايل */
+@media (max-width: 500px) {
+  .social-links a {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
   }
 }
